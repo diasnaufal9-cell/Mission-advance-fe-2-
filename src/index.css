@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import "tailwindcss";
+@theme {
+    --color-primary: #3CBF4C;
+    --color-primary-dark: #2E9E3C;
+    --color-primary-light: #E8F8EA;
+    --color-secondary: #FFB800;
+    --color-accent: #FF6B35;
+    --color-bg-cream: #FFFDF7;
+    --font-lato: 'Lato', sans-serif;
+}
+
+body {
+    font-family: var(--font-lato);
+}
+
+/* ini styling buat phone number yah  */
+.phone-input-wrapper .PhoneInput {
+    display: flex;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.phone-input-wrapper .PhoneInputCountry {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    background-color: #f9fafb;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: #111827;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.phone-input-wrapper .PhoneInputCountry:hover {
+    border-color: #3CBF4C;
+    background-color: #E8F8EA;
+}
+
+.phone-input-wrapper .PhoneInputCountry:focus-within {
+    outline: none;
+    border-color: #3CBF4C;
+    box-shadow: 0 0 0 3px rgba(60, 191, 76, 0.1);
+}
+
+.phone-input-wrapper .PhoneInputCountryIcon {
+    width: 1.5rem;
+    height: 1rem;
+    object-fit: cover;
+    border-radius: 0.125rem;
+}
+
+.phone-input-wrapper .PhoneInputCountrySelectArrow {
+    width: 0.75rem;
+    height: 0.75rem;
+    color: #4b5563;
+}
+
+.phone-input-wrapper .PhoneInputInput {
+    flex: 1;
+    padding: 0.875rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #111827;
+    background-color: white;
+    transition: all 0.2s;
+}
+
+.phone-input-wrapper .PhoneInputInput::placeholder {
+    color: #9ca3af;
+}
+.phone-input-wrapper .PhoneInputInput:focus {
+    outline: none;
+    border-color: #3CBF4C;
+    box-shadow: 0 0 0 3px rgba(60, 191, 76, 0.1);
+}
+.phone-input-wrapper .PhoneInputCountrySelect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.phone-input-wrapper .PhoneInputCountry {
+    position: relative;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+    box-shadow: 0 0 0 1000px #ffffff inset !important;
+    -webkit-text-fill-color: #111827 !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
