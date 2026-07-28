@@ -3,7 +3,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 // Layout
-import AdminLayout from './components/layout/Adminlayout';
+import AdminLayout from './components/layout/AdminLayout';
 
 // Routes
 import ProtectedRoute from './routes/ProtectedRoute';
